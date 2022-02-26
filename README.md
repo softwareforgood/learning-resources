@@ -4,7 +4,9 @@
 
 Fork this repo to your own github and then clone it to your computer.
 
-You'll need to have Ruby version 3.0.3 installed with your ruby version manager (rbenv, rvm, etc) as well as postgres. Let me know if you run into any issues.
+You'll need to have Ruby version 3.0.3 installed with your ruby version manager (rbenv, rvm, etc) as well as postgres.
+
+Alternately, there is a Dockerfile if you are comfortable with container based development, but if you aren't, forget it is there!
 
 ## Rails 7!
 
@@ -22,43 +24,13 @@ Once you are up and running you should see something like this
 
 Try not to laugh at my amazing front-end design
 
-## Homework Time!
+## Learning Time!
 
-We are going to build a book review/rating app. I've gone ahead and created some books for you.
+You have been hired as the one and only full stack developer for a startup that is creating a book rating and sharing system (they see Goodreads and think they can do better!)
 
-User Story 1:
+There is a folder in this repo called "User Stories" in which you'll get a sense of how tickets might come in written by a product team. There may also be variations on whether you want to focus more on the back-end or front-end learning. And they'll be some supplemental reading and resources for you listed in each one as well.
 
-I want to be able to click on "Read Reviews" and go to a page of reviews for the book. On that page I want to be able to read reviews and also submit a review.
-
-User Story 2:
-
-I want to be able to write a review for a book that contains text, my name, and a number rating between 1 and 5 stars
-
-User Story 3:
-
-When I go to a page of reviews for a book, I want to see the average rating of stars from all the reviews for that book.
-
-User Story 4:
-
-I want to be able to see the first paragraph of each review made for the book, and be able to expand any review that is larger than one paragraph
-
-(and or any UX you find nice for this page - our key tasks are to be able to submit reviews, see reviews, and see the avverage rating of all reviews)
-
-Stretch Goal #1:
-
-Be able to sort reviews by rating so you can see the highest rated or lowest rated reviews first
-
-If you get done with this and want to do more, feel free to ping me and I have a whole list of possible user stories!
-
-Stretch Goal #2:
-
-Create an admin page and protect it somehow and allow the creation of new books in the system
-## Questions to think about
-* How is a book related to a review?
-
-* Where should the logic live for calculating the average rating of a book
-
-* What fields do you need to store for a review?
+It is one thing to try to understand Ruby and Rails from an abstract perspective, and another to dig in and build features. I hope having to implement something yourself will both bring you the excitement of seeing something exist that didn't exist before you created it, and lead you to the places in which you can dig into the unknowns in small steps. What do I need to know to do /this/ right now?
 ## Good documentation links
 
 Tailwind CSS (CSS framework)
@@ -69,5 +41,3 @@ https://daisyui.com
 
 Rails 7 docs
 https://guides.rubyonrails.org/
-
-
