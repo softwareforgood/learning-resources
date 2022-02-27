@@ -43,6 +43,7 @@ You will still need the actions to return what you want either in a rails contro
 Don't try to implement the back-end and front-end all at once. You can implement the back-end and then build on top of it or even build a front-end with fake objects and then figure out how to get them there
 
 On the backend:
+
 * How is a book related to a review?
 
 * What fields do you need to store for a review?
@@ -51,8 +52,8 @@ On the backend:
 
 (one at a time! the first thing you need is a book to have reviews!)
 
-If you are stuck there is a branch called reviews-tests that will give you failing tests that you can make pass (we won't focus a ton on testing here, because it can be overwhelming to also learn how rspec works, but testing will be part of any app you work on)
+If you are stuck there is a branch called reviews-tests that will give you failing tests that you can make pass for the models (we won't focus a ton on testing here, because it can be overwhelming to also learn how rspec works, but testing will be part of any app you work on)
 
-And if you are really stuck or want to see another solution, there is a branch called reviews-full with a full implemention.
+And if you are really stuck or want to see another solution, there is a branch called reviews-full with a full implemention (okay, almost full - you'll still have to figure out how to make a new review yourself, and make it look nicer!)
 
 But for at least a day, allow yourself to be stuck and play. An error message doesn't mean anything bad! Just that Rails doesn't know what you want it to do yet.
