@@ -10,7 +10,9 @@
       <%= book.description %>
     </p>
     <div class="justify-end card-actions">
-      <button class="btn btn-secondary">Read Reviews</button>
+      <a class="btn btn-secondary" href=<%= book_reviews_path(book_id: book.id) %>>
+        Read Reviews
+      </a>
     </div>
   </div>
 </div>

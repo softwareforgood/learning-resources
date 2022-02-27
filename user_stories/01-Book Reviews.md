@@ -1,5 +1,5 @@
-First, we need reviews! These are progressive so you don't need to implement them all once.
-
+First, we need reviews!
+These are progressive so you don't need to implement them all once.
 Small PRs for chunks of functionality. Could just be a backend change.
 
 Remember, checkout a branch
@@ -8,29 +8,35 @@ Remember, checkout a branch
 
 Implement a small piece of functionality and push that to github and make a PR against your own `main` branch.
 
-*User Story 1:*
+## User Story 1
 
-I want to be able to click on "Read Reviews" and go to a page of reviews for the book. On that page I want to be able to read reviews and also submit a review.
+I want to be able to click on "Read Reviews" and go to a page of reviews for the book.
 
-*User Story 2:*
+A review should have a 1-5 star rating, and optionally a longer text description and the reviewer name.
+
+## User Story 2
+
+On that page I also want to be able to submit a review.
 
 I want to be able to write a review for a book that contains text, my name, and a number rating between 1 and 5 stars
 
-*User Story 3:*
+After my review is saved, I should see it on the page. If I forget to select a rating, I should get an error.
+
+## User Story 3
 
 When I go to a page of reviews for a book, I want to see the average rating of stars from all the reviews for that book.
 
-*User Story 4:*
+## User Story 4
 
 I want to be able to see the first paragraph of each review made for the book, and be able to expand any review that is larger than one paragraph
 
-(and or any UX you find nice for this page - our key tasks are to be able to submit reviews, see reviews, and see the avverage rating of all reviews)
+(and or any UX you find nice for this page - our key tasks are to be able to submit reviews, see reviews, and see the average rating of all reviews)
 
-*Stretch Goal #1:*
+## Back end stretch goal
 
-Be able to sort reviews by rating so you can see the highest rated or lowest rated reviews first
+I also want to be able to see how many reviews a book has gotten for each star rating (2 1-star reviews, 3 4-star reviews, etc) and sort reviews by rating
 
-*Front end stretch goal*
+### Front end stretch goal
 
 You can absolutely do this with rails routes and load a page with every request, or you could make it reactive.
 
@@ -43,6 +49,7 @@ You will still need the actions to return what you want either in a rails contro
 Don't try to implement the back-end and front-end all at once. You can implement the back-end and then build on top of it or even build a front-end with fake objects and then figure out how to get them there
 
 On the backend:
+
 * How is a book related to a review?
 
 * What fields do you need to store for a review?

@@ -1,0 +1,25 @@
+<div class="px-4 pt-3 pb-3 my-5 bg-white md:pb-1 md:px-16 bg-opacity-40">
+  <div class="flex flex-wrap items-center">
+    <h4 class="w-full text-xl font-medium md:w-auto font-heading"><%= review.reviewer || 'anonymous' %></h4>
+    <div class="w-full h-2 mx-8 bg-transparent md:w-px md:h-8 md:bg-gray-200">
+      <span class="mr-4 text-xl font-medium font-heading">
+        <%= review.rating %>
+      </span>
+    </div>
+      <div class="inline-flex">
+        <% 5.times do |n| %>
+          <div class="inline-block mr-1">
+            <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 7.91677H12.4167L10 0.416763L7.58333 7.91677H0L6.18335 12.3168L3.81668 19.5834L10 15.0834L16.1834 19.5834L13.8167 12.3168L20 7.91677Z"
+                fill=<%= n < review.rating ? '#ffc107' : '#ccc' %>
+              >
+            </svg>
+          </div>
+        <% end %>
+      </div>
+      <div class="text-xl">
+        <%= review.truncated_review %>
+      </div>
+  </div>
+</div>
