@@ -40,4 +40,30 @@ RSpec.describe Book, type: :model do
     book.cover_picture = active_storage_attachement
     expect(book.cover_picture).to be_attached
   end
+
+  describe "reviews" do
+    def create_reviews_for_book(book)
+      (1..5).each do |rating|
+        book.reviews.create!(rating: rating, reviewer: Faker::Name.name, review_text: Faker::Lorem.paragraphs(5))
+      end
+    end
+
+    before do
+      book.save && create_reviews_for_book(book)
+    end
+
+    it "has many reviews" do
+      expect(book.reviews.count).to eq 5
+    end
+
+    it "can average it's own reviews" do
+      expect(book.average_rating).to eq 3
+    end
+
+    # stretch goal!
+    xit "can give us a frequency count of review ratings" do
+      create_reviews_for_book(book)
+      expect(book.ratings_count).to eq({ 1 => 2, 2 => 2, 3 => 2, 4 => 2, 5 => 2 })
+    end
+  end
 end
