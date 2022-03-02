@@ -13,6 +13,8 @@ Alternately, there is a Dockerfile if you are comfortable with container based d
 This is using the brand spanking new release of Rails 7. Go ahead and do `bundle install` and `yarn install` and make sure all the dependencies install correctly.
 
 Create and seed your database (check `seeds.rb` if you want to see how they are created)
+- `bundle exec rake db:setup`
+- `bundle exec rake db:seed`
 
 To run a dev server that it automatically compiling JS/CSS and running Puma the new command is `bin/dev` instead of `rails s`
 
