@@ -21,7 +21,7 @@ You can also completely reset the database at any time and reseed it all at once
 
 good to be able to reset your database if you get it into a strange state (obviously run that only in development)
 
-## Important not about starting the app!
+## Important note about starting the app!
 
 To run a dev server that it automatically compiling JS/CSS and running Puma the new command is `bin/dev` instead of `rails s`
 
