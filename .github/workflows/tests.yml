@@ -1,0 +1,38 @@
+name: Rspec Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        ports: ['5432:5432']
+        env:
+          POSTGRES_USERNAME: 'postgres'
+          POSTGRES_PASSWORD: 'test'
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: install PostgreSQL client
+        run: sudo apt-get install libpq-dev
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Run Rspec Unit Tests
+        run: bundle exec rails db:setup && bundle exec rspec
+        env:
+          DATABASE_HOST: 127.0.0.1
+          DATABASE_USERNAME: 'postgres'
+          DATABASE_PASSWORD: 'test'
