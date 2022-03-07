@@ -4,9 +4,7 @@
 
 Fork this repo to your own github and then clone it to your computer.
 
-You'll need to have Ruby version 3.0.3 installed with your ruby version manager (rbenv, rvm, etc) as well as postgres.
-
-Alternately, there is a Dockerfile if you are comfortable with container based development, but if you aren't, forget it is there!
+You'll need to have Ruby version 3.1.1 installed with your ruby version manager (rbenv, rvm, etc) as well as postgres (you can install postgres using `brew install postgres` or via the Postgres.app)
 
 ## Rails 7!
 
